@@ -1,3 +1,7 @@
 window.onload = function() {
-  console.log('works');
+
+  let w = 'works';
+
+  console.log(w);
+
 }
