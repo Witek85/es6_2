@@ -76,6 +76,32 @@ console.log(Article.compareId(art1, art3));
 console.log(blog1.id, blog1.title, blog1.category);
 console.log(blog1.getId());
 
+// symbole
+
+var s1 = Symbol('login');
+var s2 = Symbol('login');
+
+console.log(s1, s2);
+// symbole zawsze są unikalne
+console.log(s1 == s2);
+
+var Person = {
+  name: "Mariusz",
+  age: 39,
+  city: "Warsaw"
+
+  // przypisanie symbolu do klasy
+};var s3 = Symbol();
+Person[s3] = 2347239487;
+
+for (var i in Person) {
+  console.log(i);
+}
+// symbol jest quasi-prywatny
+// symbol nie jest właściwością obiektu, tylko jest do niego przypisany
+console.log(Person[s3]);
+console.log(Object.getOwnPropertySymbols(Person));
+
 window.onload = function () {
 
   var w = 'works';
