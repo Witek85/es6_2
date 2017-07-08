@@ -74,6 +74,25 @@ for (let i in Person) {
 console.log(Person[s3]);
 console.log(Object.getOwnPropertySymbols(Person));
 
+// literały obiektowe
+
+function getPerson(name, age) {
+  return {
+    name,
+    age,
+    checkAge() {
+      return this.age > 18;
+    },
+    // dynamiczne ustawienie właściwości
+    ['user'+name+age]: "Ok"
+  }
+}
+
+let Marian = getPerson("Marian", 27)
+console.log(Marian);
+console.log(Marian.checkAge());
+console.log(Marian.userMarian27);
+
 window.onload = function() {
 
   let w = 'works';
