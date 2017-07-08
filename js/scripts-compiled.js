@@ -2,6 +2,10 @@
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 // class ma hoisting tak jak var function
@@ -38,6 +42,21 @@ var Article = function () {
   return Article;
 }();
 
+var BlogArticle = function (_Article) {
+  _inherits(BlogArticle, _Article);
+
+  function BlogArticle(id, title, category) {
+    _classCallCheck(this, BlogArticle);
+
+    var _this = _possibleConstructorReturn(this, (BlogArticle.__proto__ || Object.getPrototypeOf(BlogArticle)).call(this, id, title));
+
+    _this.category = category;
+    return _this;
+  }
+
+  return BlogArticle;
+}(Article);
+
 var Article2 = function ArticleClass() {
   _classCallCheck(this, ArticleClass);
 };
@@ -45,6 +64,7 @@ var Article2 = function ArticleClass() {
 var art1 = new Article(123, "First title");
 var art2 = new Article2();
 var art3 = new Article(122, "Second title");
+var blog1 = new BlogArticle(235, "First Blog", "general");
 
 console.log(art2);
 console.log(art1);
@@ -53,6 +73,8 @@ console.log(art1.title);
 console.log(art1.getId());
 console.log(art1.getTitle());
 console.log(Article.compareId(art1, art3));
+console.log(blog1.id, blog1.title, blog1.category);
+console.log(blog1.getId());
 
 window.onload = function () {
 

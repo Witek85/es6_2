@@ -20,6 +20,13 @@ class Article {
 
 }
 
+class BlogArticle extends Article {
+    constructor(id, title, category) {
+    super(id, title);
+    this.category = category;
+  }
+}
+
 const Article2 = class ArticleClass {
 
 }
@@ -27,6 +34,7 @@ const Article2 = class ArticleClass {
 const art1 = new Article(123, "First title");
 const art2 = new Article2;
 const art3 = new Article(122, "Second title");
+const blog1 = new BlogArticle(235, "First Blog", "general");
 
 console.log(art2);
 console.log(art1);
@@ -35,6 +43,8 @@ console.log(art1.title);
 console.log(art1.getId());
 console.log(art1.getTitle());
 console.log(Article.compareId(art1, art3));
+console.log(blog1.id, blog1.title, blog1.category);
+console.log(blog1.getId());
 
 window.onload = function() {
 
