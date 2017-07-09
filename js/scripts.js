@@ -141,6 +141,19 @@ Promise.all([p2, p3, p4]).then(result => {
   console.log('all error');
 });
 
+// fetch
+// metoda fetch zwraca promise
+
+const image1 = document.querySelector('.fetch-img');
+
+fetch('czajnik.jpg').then(function(response){
+  console.log(response);
+  return response.blob();
+}).then(function(blob){
+  let imageURL = URL.createObjectURL(blob);
+  image1.src = imageURL;
+});
+
 window.onload = function() {
 
   let w = 'works';
