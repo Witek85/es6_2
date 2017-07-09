@@ -186,4 +186,9 @@ window.onload = function () {
 
   var w = 'works';
   console.log(w);
+
+  // moduły
+
+  // import {env} from './module.js';
+  // console.log(env);
 };
