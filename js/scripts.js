@@ -93,10 +93,36 @@ console.log(Marian);
 console.log(Marian.checkAge());
 console.log(Marian.userMarian27);
 
+// promise
+
+var x1 = 1;
+
+// resolve - Ok
+// reject - odrzucone
+
+let p1 = new Promise(function(resolve, reject){
+  if (x1 == 1) {
+    resolve('Ok!');
+  } else {
+    reject(Error('error'));
+  }
+});
+
+console.log(x1);
+console.log('promise', p1);
+
+// gdy jest status resolve
+p1.then(function(result){
+  console.log('promise then - ok');
+})
+// gdy jest status reject
+  .catch(function(error){
+ console.log('promise catch - not ok');
+});
+
 window.onload = function() {
 
   let w = 'works';
-
   console.log(w);
 
 }
