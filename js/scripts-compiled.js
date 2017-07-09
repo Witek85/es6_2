@@ -148,6 +148,27 @@ p1.then(function (result) {
   console.log('promise catch - not ok');
 });
 
+// promise 2 cd
+
+var p2 = new Promise(function (resolve, reject) {
+  resolve('ok 2!');
+});
+
+var p3 = new Promise(function (resolve, reject) {
+  resolve('ok 3!');
+  // reject('error');
+});
+
+var p4 = new Promise(function (resolve, reject) {
+  resolve('ok 4!');
+});
+
+Promise.all([p2, p3, p4]).then(function (result) {
+  console.log('all results ok');
+}).catch(function (error) {
+  console.log('all error');
+});
+
 window.onload = function () {
 
   var w = 'works';
