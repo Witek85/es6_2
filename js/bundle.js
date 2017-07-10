@@ -87,6 +87,18 @@ console.log((0, _module.multiply)(2, 6));
 console.log(module2.env);
 console.log(module2.sumNumbers(2, 3));
 
+var x = {};
+var handler = {
+	get: function get(obj, key) {
+		return 'value - ' + obj[key];
+	}
+};
+
+var p = new Proxy(x, handler);
+p.id = 12345;
+console.log('proxy');
+console.log(p.id);
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -102,6 +114,8 @@ var env = 'PROD';
 var multiply = function multiply(a, b) {
   return a * b;
 };
+
+console.log('hello from module!');
 
 exports.env = env;
 exports.multiply = multiply;
