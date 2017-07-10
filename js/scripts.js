@@ -159,8 +159,4 @@ window.onload = function() {
   let w = 'works';
   console.log(w);
 
-  // moduły
-
-  // import {env} from './module.js';
-  // console.log(env);
 }
