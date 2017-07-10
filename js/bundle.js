@@ -65,48 +65,65 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__module_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__module2_js__ = __webpack_require__(2);
-  // moduły
+
+
+var _module = __webpack_require__(1);
+
+var _module2 = __webpack_require__(2);
+
+var module2 = _interopRequireWildcard(_module2);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+// moduły
 
 console.log('modules');
 
-
-
-console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["a" /* env */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["b" /* multiply */](2,6));
-console.log(__WEBPACK_IMPORTED_MODULE_1__module2_js__["a" /* env */]);
-console.log(__WEBPACK_IMPORTED_MODULE_1__module2_js__["b" /* sumNumbers */](2,3));
+console.log(_module.env);
+console.log((0, _module.multiply)(2, 6));
+console.log(module2.env);
+console.log(module2.sumNumbers(2, 3));
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return env; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return multiply; });
-const env = 'PROD';
-
-let multiply = (a,b) => a * b;
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var env = 'PROD';
+
+var multiply = function multiply(a, b) {
+  return a * b;
+};
+
+exports.env = env;
+exports.multiply = multiply;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return env; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return sumNumbers; });
-const env = 'DEV';
-
-let sumNumbers = (a,b) => a + b;
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var env = 'DEV';
+
+var sumNumbers = function sumNumbers(a, b) {
+  return a + b;
+};
+
+exports.env = env;
+exports.sumNumbers = sumNumbers;
 
 /***/ })
 /******/ ]);
