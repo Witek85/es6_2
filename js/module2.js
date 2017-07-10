@@ -1,7 +1,5 @@
 const env = 'DEV';
 
-function sumNumbers(a,b) {
-	return a + b;
-}
+let sumNumbers = (a,b) => a + b;
 
 export {env, sumNumbers}

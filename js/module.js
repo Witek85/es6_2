@@ -1,5 +1,5 @@
-export const env = 'PROD';
+const env = 'PROD';
 
-export function sumNumbers(a,b) {
-	return a + b;
-}
+let multiply = (a,b) => a * b;
+
+export {env, multiply}
