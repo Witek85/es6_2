@@ -89,3 +89,23 @@ console.log(Array.from(arr1));
 let arr2 = [1,2,3,4];
 console.log(Array.from(arr2, x => x + 1));
 console.log(arr2.find(x => x > 2));
+
+// Object
+
+let pers = {
+	name: 'Witek',
+	age: 32
+};
+
+let pers2 = Object.assign(pers, {height: 188});
+// let pers3 = pers;
+pers.age = 22; // reference
+console.log(pers);
+console.log(pers2);
+// console.log(pers3);
+// obiekty - reference, zmienne - kopiowanie
+let myAge = 32;
+let myage2 = myAge;
+myAge = 30;
+console.log(myAge);
+console.log(myage2);

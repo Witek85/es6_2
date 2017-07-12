@@ -174,6 +174,26 @@ console.log(arr2.find(function (x) {
 	return x > 2;
 }));
 
+// Object
+
+var pers = {
+	name: 'Witek',
+	age: 32
+};
+
+var pers2 = Object.assign(pers, { height: 188 });
+// let pers3 = pers;
+pers.age = 22; // reference
+console.log(pers);
+console.log(pers2);
+// console.log(pers3);
+// obiekty - reference, zmienne - kopiowanie
+var myAge = 32;
+var myage2 = myAge;
+myAge = 30;
+console.log(myAge);
+console.log(myage2);
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
