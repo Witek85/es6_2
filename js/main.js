@@ -81,3 +81,11 @@ console.log(num7.toFixed()==Number.parseInt(num6)); // true
 console.log(num7.toFixed()==Number.parseInt(num7)); // true
 console.log(num7.toFixed()===Number.parseInt(num6)); // false
 console.log(num7.toFixed()===Number.parseInt(num7)); // false
+
+// array
+
+let arr1 = 'Header';
+console.log(Array.from(arr1));
+let arr2 = [1,2,3,4];
+console.log(Array.from(arr2, x => x + 1));
+console.log(arr2.find(x => x > 2));

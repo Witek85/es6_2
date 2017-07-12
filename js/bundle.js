@@ -162,6 +162,18 @@ console.log(num7.toFixed() == Number.parseInt(num7)); // true
 console.log(num7.toFixed() === Number.parseInt(num6)); // false
 console.log(num7.toFixed() === Number.parseInt(num7)); // false
 
+// array
+
+var arr1 = 'Header';
+console.log(Array.from(arr1));
+var arr2 = [1, 2, 3, 4];
+console.log(Array.from(arr2, function (x) {
+	return x + 1;
+}));
+console.log(arr2.find(function (x) {
+	return x > 2;
+}));
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
