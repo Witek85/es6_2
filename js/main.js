@@ -60,3 +60,24 @@ let num2 = 8;
 console.log(Math.log2(num2));
 let num3 = 100;
 console.log(Math.log10(num3));
+
+// number
+
+let num4 = 12;
+let num5 = 12 * 'E';
+
+console.log(Number.isInteger(num3));
+console.log(Number.isNaN(num5));
+// zwykły isnan zwraca true dla undefined i 'NaN'
+
+let num6 = '23.42324';
+let num7 = 23.42324;
+console.log('parseInt', Number.parseInt(num6));
+console.log('isSafeInteger', Number.isSafeInteger(num7));
+console.log('typeof', typeof(Number.parseInt(num6)));
+console.log(num7.toFixed());
+console.log('typeof', typeof(num7.toFixed()));
+console.log(num7.toFixed()==Number.parseInt(num6)); // true
+console.log(num7.toFixed()==Number.parseInt(num7)); // true
+console.log(num7.toFixed()===Number.parseInt(num6)); // false
+console.log(num7.toFixed()===Number.parseInt(num7)); // false

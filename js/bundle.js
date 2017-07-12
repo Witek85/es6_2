@@ -70,6 +70,8 @@
 "use strict";
 
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _module = __webpack_require__(1);
 
 var _module2 = __webpack_require__(2);
@@ -138,6 +140,27 @@ var num2 = 8;
 console.log(Math.log2(num2));
 var num3 = 100;
 console.log(Math.log10(num3));
+
+// number
+
+var num4 = 12;
+var num5 = 12 * 'E';
+
+console.log(Number.isInteger(num3));
+console.log(Number.isNaN(num5));
+// zwykły isnan zwraca true dla undefined i 'NaN'
+
+var num6 = '23.42324';
+var num7 = 23.42324;
+console.log('parseInt', Number.parseInt(num6));
+console.log('isSafeInteger', Number.isSafeInteger(num7));
+console.log('typeof', _typeof(Number.parseInt(num6)));
+console.log(num7.toFixed());
+console.log('typeof', _typeof(num7.toFixed()));
+console.log(num7.toFixed() == Number.parseInt(num6)); // true
+console.log(num7.toFixed() == Number.parseInt(num7)); // true
+console.log(num7.toFixed() === Number.parseInt(num6)); // false
+console.log(num7.toFixed() === Number.parseInt(num7)); // false
 
 /***/ }),
 /* 1 */
